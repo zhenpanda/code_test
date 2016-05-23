@@ -12,8 +12,8 @@
 <body class="reset">
 	<!-- #container -->
 	<div id="container">
-		<!-- #wrapper -->
-		<div id="wrapper">
+		<!-- #header-wrapper -->
+		<div class="wrapper">
 			<!-- #header -->
 			<div id="header">
 				<!-- #left_col -->
@@ -31,14 +31,15 @@
 				<!-- #right_col -->
 				<div id="right_col">
 					<div class="clear">					
-						<!-- top right area -->
 						<div id="cart_header" class="clear">
 							<!-- #mycart -->
 							<div id="mycart">
 								<ul class="clear reset">
 									<li class="lead">
-										<img src="imgs/my_cart.png" id="my-cart">
-										<span class="total">(2)</span>
+										<a href="https://www.supplyhouse.com/pex/control/viewCart">
+											<img src="imgs/my_cart.png" id="my-cart">
+										</a>
+										<div id="cart-num">(2)</div>
 									</li>
 									<li class="">
 										<img src="imgs/checkout.png" id="checkout">
@@ -60,12 +61,46 @@
 								</ul>
 							</div>
 						</div>
+						<div class="clear" id="price">				
+							<img src="imgs/price.png" id="promo">
+						</div>
+						<!-- #search global -->
+						<div id="search" class="clear">
+							<div id="search_global">
+								<div class="field text">								
+									<div>
+									    <input type="text" id="text"></input>
+									    <label for="text">Enter Product or SKU #</label>
+									</div>
+								</div>
+								<button type="button" class="btn_search_global" id="btn_search_global"></button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<!-- #nav_main -->
 			<div id="nav_main" class="clear">
-				
+				<img src="imgs/hover_bg.png">
+			</div>
+		</div>
+		<!-- banners -->
+		<div id="banner">		
+			<div id="left-banner"><img src="imgs/left_banner.png"></div>
+			<div id="right-banner"><img src="imgs/right_banner.png"></div>
+		</div>
+		<!-- #header-nav -->
+		<div id="header-nav">
+			
+		</div>
+		<!-- #main-wrapper -->
+		<div class="wrapper">
+			<div id="side-bar">
+			</div>
+			<div id="main">
+				<div id="main-top">
+					
+				</div>
 			</div>
 		</div>
 	</div>

@@ -20,10 +20,6 @@ body {
     min-height: 100%;
 }
 
-#container #wrapper {
-    padding: 0 11px;
-}
-
 /* header CSS */
 /* --------- --------- --------- --------- --------- */
 
@@ -49,7 +45,6 @@ body {
 #phone_header {
     margin: 4px 0 11px 0;
 }
-
 #header #phone {
     color: #424242;
     font-weight: bold;
@@ -64,24 +59,16 @@ body {
     background-position: left bottom;
     text-indent: -1000em;
 }
-
-#nav_main {
-    height: 31px;
-    padding: 0;
-}
-
 #nav_utility {
-    margin: 3px 0 0 0;
+    margin: 3px 12px 0 0;
     display: inline;
     z-index: 1000;
     position: absolute;
     right: 250px;
 }
-
 #nav_utility ul {
     float: left;
 }
-
 #nav_utility ul li.tag {
 	margin-left: 2px;
 	display: inline;
@@ -93,32 +80,26 @@ body {
     position: relative;
     z-index: 9999;
 }
-
 #nav_utility ul li a {
     color: #8c8c8c;
     text-decoration: none;
     font-size: 62.5%;
 }
-
 #mycart {
     background: url(../imgs/bg_mycart_left.gif) no-repeat left bottom;
     height: 33px;
     padding: 0 0 0 13px;
     float: right;
 }
-
 #mycart ul {
     float: left;
     height: 33px;
     background: url(../imgs/bg_mycart_right.gif) no-repeat right bottom;
 }
-
 #mycart ul li.lead {
     background: url(../imgs/bg_mycart_lead.gif) no-repeat right bottom;
     padding-left: 0;
-    line-height: 2.3;
 }
-
 #mycart ul li a em {
     color: #4b2113;
     font-style: normal;
@@ -130,27 +111,132 @@ body {
     text-indent: -1000em;
     background: url(../img/icon/icon_mycart.gif) no-repeat left bottom;
 }
-
 #mycart ul li {
     float: left;
     height: 33px;
     color: #8e7266;
     padding: 0 11px 0 8px;
 }
-
 #mycart ul li a span {
     float: left;
 }
-
 #my-cart {
 	margin-top: 10px;
 	margin-right: 6px;
 	float: left;
 }
-
+#cart-num {
+	float: left;
+	padding-top: 6px;
+    font-size: 0.95em;
+}
 #checkout {
 	margin-top: 6px;
 }
+
+#promo {
+	margin-top: 50px;
+}
+#price {
+	float: left;
+}
+
+#search {
+    margin: 8px 0 0;
+    width: 245px;
+    float: right;
+    margin-top: 40px;
+    position: relative;
+}
+#search {
+    background-color: #fff;
+    border: 0;
+    width: 159px;
+    height: 26px;
+/*    padding: 0 14.5px;*/
+    position: relative;
+}
+#search #search_global {
+    float: right;
+    width: 245px;
+    padding: 0;
+    border: 3px solid #e7dbc6;
+}
+#search #search_global .field.text input {
+    border: 0;
+    margin: 5px 0 0 0;
+    width: 150px;
+    color: #222;
+    background: transparent;
+}
+#search #search_global .field.text {
+    background-color: #fff;
+    border: 0;
+    width: 159px;
+    height: 26px;
+    padding: 0 14.5px;
+    position: relative;
+}
+#search #search_global .field {
+    float: left;
+}
+#text:focus + label {
+    display: none;
+}
+#search #search_global .field.text label {
+    color: #ccc;
+    position: absolute;
+    left: 12px;
+    top: 6px;
+    font-size: 0.75em;
+}
+#search #btn_search_global {
+    float: left;
+    display: block;
+    height: 26px;
+    width: 57px;
+    background: url(../imgs/search.png) no-repeat left bottom;
+}
+
+
+#nav_main {
+    height: 31px;
+    padding: 0;
+}
+#banner {
+	height: 48px;
+}
+#left-banner {
+	float: left;
+	padding-left: 3px;
+}
+#right-banner {
+	float: right;
+	padding-right: 2px;
+}
+
+#header-nav {
+	height: 30px;
+}
+
+/* main CSS */
+/* --------- --------- --------- --------- --------- */
+
+#side-bar {
+	float: left;
+	width: 170px;
+	height: 1260px;
+	background:	#f2f2f2 url(../imgs/side_bar_bg.png) repeat-y;
+}
+#main {
+	float: right;
+	width: 790px;
+}
+#main-top {
+	height: 73px;
+	background:	#f2f2f2 url(../imgs/main_top_bg.png) repeat-x;
+}
+
 /* shared CSS */
 /* --------- --------- --------- --------- --------- */
 .reset {
@@ -178,4 +264,9 @@ img {
 
 ul li {
     list-style-type: none;
+}
+
+
+#container .wrapper {
+    padding: 0 11px;
 }
