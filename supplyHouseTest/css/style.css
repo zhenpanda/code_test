@@ -183,6 +183,9 @@ body {
 #text:focus + label {
     display: none;
 }
+#text:focus {
+    outline: none;
+}
 #search #search_global .field.text label {
     color: #ccc;
     position: absolute;
@@ -197,7 +200,6 @@ body {
     width: 57px;
     background: url(../imgs/search.png) no-repeat left bottom;
 }
-
 
 #nav_main {
     height: 31px;
@@ -216,21 +218,120 @@ body {
 }
 
 #header-nav {
-	height: 30px;
+	margin-left: 19px;
+	margin-top: 11px;
+	padding-left: 11px;
+	height: 11px;
+	margin-bottom: 10px;
 }
 
-/* main CSS */
-/* --------- --------- --------- --------- --------- */
+#header-nav a {
+	text-decoration: none;
+}
+#home-icon {
+	width: 10px;
+	height: 9px;
+	float: left;
+}
+.arrow-icon {
+	width: 5px;
+	height: 10px;
+	float: left;
+	display: inline;
+}
+.header-text {
+	font-size: 11px;
+	color: #336699;
+	float: left;
+	margin-top: -2px;
+	margin-left: 6px;
+	margin-right: 8px;
+}
+#end-text {
+	color: #333333;
+}
 
+/* Side bar CSS */
+/* --------- --------- --------- --------- --------- */
 #side-bar {
 	float: left;
 	width: 170px;
 	height: 1260px;
 	background:	#f2f2f2 url(../imgs/side_bar_bg.png) repeat-y;
 }
+#bar-list {
+	margin-top: 22px;
+	margin-left: 19px;
+}
+#bar-line {
+	background-color: #cccccc;
+	width: 132px;
+	height: 3px;
+}
+.bar-line-thin {
+	background-color: #cccccc;
+	width: 132px;
+	height: 1px;
+}		
+#bar-title {
+	margin-top: 8px;
+	margin-bottom: 10px;
+	height: 12px;
+	font-size: 12px;
+	font-weight: bold;
+	color: black;
+}
+.bar-block {
+	height: 26px;
+    cursor: pointer;
+}
+.bar-block:hover .side-icon {
+    opacity: 1;
+}
+.side-icon {
+	margin-top: 8px;
+	width: 4px;
+	height: 9px;
+	opacity: .5;
+	position: absolute;
+}
+#bar-text-main{
+	position: absolute;
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #666666;
+}
+.bar-block:hover #bar-text-main {
+    color: #ff9933;
+}
+.bar-text {
+    position: absolute;
+    margin-top: 6px;
+    margin-left: 8px;
+    padding-left: 5px;
+    font-size: 11px;
+    color: #666666;
+}
+.bar-block:hover .bar-text {
+    color: #ff9933;
+}
+#social-me {
+    margin-top: 16px;
+}
+.social-btn {
+    width: 105px;
+    height: 32px;
+    cursor: pointer;
+}
+
+/* main CSS */
+/* --------- --------- --------- --------- --------- */
 #main {
 	float: right;
-	width: 790px;
+	width: 790px;             
 }
 #main-top {
 	height: 73px;
@@ -246,8 +347,8 @@ body {
 	height: 7px;
 }
 #main-title {
-	font-size: 24px;
-	margin-top: 36px;
+	font-size: 28px;
+	margin-top: 34px;
 	margin-left: 29px;
 	position: absolute;
 }
@@ -258,17 +359,16 @@ body {
 	height: 293px;
 	margin-bottom: 44px;
 }
-.image {
-	position: absolute;
-}
-#top {
+/* rotate imgs */
+.front {
+    position: absolute;
 	z-index: 10;
+    display: block;
 }
-#mid {
-	z-index: 0;
-}
-#bot {
-	z-index: 0;
+.back {
+    position: absolute;
+    z-index: 0;
+    display: none;
 }
 
 .block-row {
@@ -299,6 +399,29 @@ body {
 .bot-blocks {
 	margin-top: 9px;
 }
+
+#rotate-area {
+    margin-top: -32px;
+    margin-left: 29px;
+    padding-left: 334px;
+    height: 12px;
+    position: absolute;
+}
+.circle {
+    margin-right: 18px;
+    float: left;
+    width: 12px;
+    height: 12px;
+    background: #cccccc;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.target-c {
+    background: #cc6633;
+}
+
 /* shared CSS */
 /* --------- --------- --------- --------- --------- */
 .reset {
@@ -306,14 +429,12 @@ body {
   border: 0;
   margin: 0;
 }
-
 .flo-left {
 	float: left;
 }
 .flo-right {
 	float: right;
 }
-
 .clear:after {
     content: ".";
     clear: both;
@@ -322,15 +443,16 @@ body {
     height: 0;
     line-height: 0;
 }
-
 img {
     display: block;
 }
-
 ul li {
     list-style-type: none;
 }
-
 #container .wrapper {
     padding: 0 11px;
+}
+
+.space {
+    margin-top: 10px;
 }
