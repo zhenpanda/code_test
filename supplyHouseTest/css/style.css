@@ -245,10 +245,17 @@ body {
 	width: 755px;
 	height: 7px;
 }
+#main-title {
+	font-size: 24px;
+	margin-top: 36px;
+	margin-left: 29px;
+	position: absolute;
+}
 .main-space {
 	padding-left: 29px;
 }
 #main-imgs {
+	height: 293px;
 	margin-bottom: 44px;
 }
 .image {
@@ -264,6 +271,34 @@ body {
 	z-index: 0;
 }
 
+.block-row {
+	margin-left: 29px;
+	margin-right: 21px;
+}
+.block {
+	width: 360px;
+	height: 292px;
+	color: #333333;
+}
+.block-img {
+	width: 360px;
+	height: 170px;
+}
+.long-block-img {
+	width: 170px;
+	height: 230px;
+}
+.block-title {
+	font-weight: 600;
+	margin-top: 13px;
+	margin-bottom: 7px;
+}
+.block-text {
+	font-size: 0.75em;
+}
+.bot-blocks {
+	margin-top: 9px;
+}
 /* shared CSS */
 /* --------- --------- --------- --------- --------- */
 .reset {
@@ -272,8 +307,11 @@ body {
   margin: 0;
 }
 
-.clear {
-    display: block;
+.flo-left {
+	float: left;
+}
+.flo-right {
+	float: right;
 }
 
 .clear:after {
@@ -292,7 +330,6 @@ img {
 ul li {
     list-style-type: none;
 }
-
 
 #container .wrapper {
     padding: 0 11px;
