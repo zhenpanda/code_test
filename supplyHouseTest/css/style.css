@@ -352,14 +352,69 @@ body {
     border: 3px solid #663333;
     z-index: 20;
     background-color: white;
-    -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
     position: absolute;
     border-top-style: none;
 }
 #heating-btn:hover #headting-dd{
     display: block;
+}
+.heating-text {
+    margin-left: 24px;
+    margin-top: 22px;
+    font-size: 12px;
+    font-weight: bold;
+}
+#target-text:hover  {
+    cursor: pointer;
+    color: white;
+}
+
+.heating-text-highlight { 
+    display: none;
+    margin-left: -10px;
+    margin-top: -24px;   
+    width: 162px;
+    height: 40px;
+    background-color: #336699;
+    font-weight: bold;
+    -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: -5;
+}
+.heating-text:hover .heating-text-highlight {
+    display: block;
+}
+
+.dropdown-side {
+    display: none;
+    margin-left: 132px;
+    margin-top: -38px;
+    width: 171px;
+    height: 464px;
+    background-color: #336699;
+    -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    border-top-style: none;
+}
+.heating-text:hover .dropdown-side{
+    display: block;
+}
+#dropdown-side-space {    
+    margin-top: 16px;
+    margin-left: 20px;
+}
+.dropdown-side-text {
+    color: white;
+    font-size: 12px;
+    margin-top: 12px;
+    font-weight: bold;
 }
 
 /* main CSS */
