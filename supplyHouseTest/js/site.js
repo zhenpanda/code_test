@@ -19,50 +19,53 @@ $(document).ready(function() {
             //find current btn
             var cbtn = $( ".target-c" ); ;
             var nbtn;
+            //set next img
+            if (cur[0].id == picAry[0]) {
+                next = $( "#"+picAry[1] );
+                nbtn = $( "#rotate-"+picAry[1] );
+            }else if (cur[0].id == picAry[1]) {
+                next = $( "#"+picAry[2] );
+                nbtn = $( "#rotate-"+picAry[2] );
+            }else if (cur[0].id == picAry[2]) {
+                next = $( "#"+picAry[0] );
+                nbtn = $( "#rotate-"+picAry[0] );
+            };
+            //change img
+            $(next).show();
+            //botton change
+            $(cbtn).removeClass( "target-c" );
+            $(nbtn).addClass( "target-c" );
+            //fade to anime the img change
+            $( cur ).fadeOut( 1000, function() {
+                //img stacked in z-index
+                $(cur).removeClass( "front" ).addClass( "back" );
+                $(next).removeClass( "back" ).addClass( "front" );
+            });
+            //console.log(cur[0].id, next[0].id);
         //set by hand
         }else{
             //console.log(changeMethod);
             var cbtn = $( "#"+changeMethod); ;
+            var nbtn;
             //botton change
             $(".circle").removeClass( "target-c" );
             $(cbtn).addClass( "target-c" );
             //force change img
             //set cur img
             if (changeMethod == btnAry[0]) {
-                var cur = $( "#bot" );
+                var cur = $( "#"+picAry[0] );
             }else if (changeMethod == btnAry[1]) {
-                var cur = $( "#top" );
+                var cur = $( "#"+picAry[1] );
             }else if (changeMethod == btnAry[2]) {
-                var cur = $( "#mid" );
+                var cur = $( "#"+picAry[2] );
             };
+            //change pic by click
+            $(".dis-img").removeClass( "front" ).addClass( "back" ).hide();
+            $(cur).addClass( "front" ).show();
         };
-
-        //set next img
-        if (cur[0].id == picAry[0]) {
-            next = $( "#"+picAry[1] );
-            nbtn = $( "#rotate-"+picAry[1] );
-        }else if (cur[0].id == picAry[1]) {
-            next = $( "#"+picAry[2] );
-            nbtn = $( "#rotate-"+picAry[2] );
-        }else if (cur[0].id == picAry[2]) {
-            next = $( "#"+picAry[0] );
-            nbtn = $( "#rotate-"+picAry[0] );
-        };
-        //change img
-        $(next).show();
-        //botton change
-        $(cbtn).removeClass( "target-c" );
-        $(nbtn).addClass( "target-c" );
-        //fade to anime the img change
-        $( cur ).fadeOut( 1200, function() {
-            //img stacked in z-index
-            $(cur).removeClass( "front" ).addClass( "back" );
-            $(next).removeClass( "back" ).addClass( "front" );
-        });
     };
     //auto rotate pics
     var r = setInterval(function(){
         setImg("auto");
     }, 4000);
-
 });

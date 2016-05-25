@@ -153,7 +153,6 @@ body {
     border: 0;
     width: 159px;
     height: 26px;
-/*    padding: 0 14.5px;*/
     position: relative;
 }
 #search #search_global {
@@ -251,6 +250,10 @@ body {
 	color: #333333;
 }
 
+#lower-part{
+    z-index: -100;
+}
+
 /* Side bar CSS */
 /* --------- --------- --------- --------- --------- */
 #side-bar {
@@ -327,6 +330,38 @@ body {
     cursor: pointer;
 }
 
+/* hover nav bar */
+/* --------- --------- --------- --------- --------- */
+#heating-btn {
+    margin-left: 93px;
+    margin-top: -31px;
+    width: 114px;
+    height: 31px;
+    position: absolute;
+}
+#heating-img {
+    display: none;
+}
+#heating-btn:hover #heating-img{
+    display: block;
+}
+#headting-dd {
+    display: none;
+    width: 171px;
+    height: 173px;
+    border: 3px solid #663333;
+    z-index: 20;
+    background-color: white;
+    -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    border-top-style: none;
+}
+#heating-btn:hover #headting-dd{
+    display: block;
+}
+
 /* main CSS */
 /* --------- --------- --------- --------- --------- */
 #main {
@@ -359,7 +394,9 @@ body {
 	height: 293px;
 	margin-bottom: 44px;
 }
+
 /* rotate imgs */
+/* --------- --------- --------- --------- --------- */
 .front {
     position: absolute;
 	z-index: 10;
